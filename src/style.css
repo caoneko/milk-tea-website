@@ -1,0 +1,72 @@
+:root {
+  --bg: #fdf6ec; /* 米黄主色 */
+  --tea: #7b9b6a; /* 茶绿色点缀 */
+  --orange: #e8824a; /* 橙色点缀 */
+  --muted: #6b5b50;
+  --card: #fffaf4;
+  --shadow: 0 6px 18px rgba(123, 155, 106, 0.08);
+  --radius: 12px;
+  --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  font-family: var(--sans);
+  box-sizing: border-box;
+}
+
+* { box-sizing: inherit; }
+html,body{height:100%;margin:0;background:var(--bg);color:var(--muted);}
+
+/* Layout */
+.nav{position:sticky;top:0;z-index:50;background:linear-gradient(180deg, rgba(253,246,236,0.95), rgba(253,246,236,0.9));border-bottom:1px solid rgba(0,0,0,0.04);}
+.nav-inner{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:12px;}
+.brand{font-weight:700;color:var(--tea);font-size:20px;}
+.nav-links{margin-left:auto;display:flex;gap:16px;align-items:center}
+.nav-links a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:500}
+.nav-links a:hover{background:rgba(123,155,106,0.08);color:var(--tea)}
+.nav-toggle{display:none;background:transparent;border:0;font-size:20px}
+
+.hero{height:46vh;min-height:320px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#f9e9d6 0%, #fff 50%);overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 20%, rgba(232,130,74,0.06), transparent 20%), url('/src/assets/hero.png');opacity:0.12}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(248,231,214,0.45), rgba(253,246,236,0.25));}
+.hero-content{position:relative;text-align:center;padding:24px}
+.hero h1{font-size:44px;margin:0;color:var(--tea);letter-spacing:1px}
+.hero .slogan{margin-top:8px;color:#8a6f5a;font-size:18px}
+
+.container{max-width:1100px;margin:36px auto;padding:0 20px}
+h2{color:var(--muted);margin:0 0 10px;font-size:22px}
+p{color:#6b5b50;line-height:1.6}
+
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);text-align:center}
+.card-emoji{font-size:34px;margin-bottom:10px}
+.card h3{margin:6px 0 8px;color:var(--muted)}
+.price{color:var(--orange);font-weight:700}
+
+.space-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px}
+.space-item{background:#efe8dd;border-radius:10px;min-height:120px;display:flex;align-items:center;justify-content:center;font-size:36px;flex-direction:column;padding:12px;color:#6b5b50}
+.space-item figcaption{margin-top:8px;font-size:14px;color:#7a6556}
+
+.contact .wechat{display:flex;align-items:center;gap:12px;margin-top:12px}
+.btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer}
+.btn-primary{background:var(--tea);color:#fff}
+.wechat-id{background:#fff;padding:8px 12px;border-radius:8px;box-shadow:var(--shadow);font-weight:600}
+
+.footer{text-align:center;padding:18px 0;color:#8a7a6a;font-size:14px}
+
+/* Responsive */
+@media (max-width:900px){
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .nav-toggle{display:block;margin-left:8px}
+  .nav-links{position:absolute;right:16px;top:64px;background:var(--bg);flex-direction:column;padding:10px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,0.06);display:none}
+  .nav-links.open{display:flex}
+}
+
+@media (max-width:520px){
+  .hero h1{font-size:32px}
+  .menu-grid{grid-template-columns:repeat(2,1fr)}
+  .space-grid{grid-template-columns:1fr}
+  .nav-inner{padding:10px 14px}
+}
+
+@media (max-width:360px){
+  .menu-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .card{padding:12px}
+}

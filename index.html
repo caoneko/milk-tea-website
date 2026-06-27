@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>茶屿初晴 - 单页面官网</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <header class="nav" id="site-nav">
+      <div class="nav-inner">
+        <div class="brand">茶屿初晴</div>
+        <nav class="nav-links" id="nav-links">
+          <a href="#hero">首页</a>
+          <a href="#about">关于</a>
+          <a href="#menu">推荐菜单</a>
+          <a href="#space">店面环境</a>
+          <a href="#contact">联系</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="切换菜单">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>茶屿初晴</h1>
+          <p class="slogan">每一杯都是现泡的温度</p>
+        </div>
+      </section>
+
+      <section id="about" class="container about">
+        <h2>关于我们</h2>
+        <p>我们用新鲜水果与现泡茶底调配，坚持不卖隔夜茶，每一杯都手作现做，用心温暖你的一天。</p>
+      </section>
+
+      <section id="menu" class="container menu">
+        <h2>推荐菜单</h2>
+        <div class="menu-grid">
+          <article class="card">
+            <div class="card-emoji">🧋</div>
+            <h3>招牌珍珠奶茶</h3>
+            <div class="price">¥15</div>
+          </article>
+          <article class="card">
+            <div class="card-emoji">🍋</div>
+            <h3>爆柠四季春</h3>
+            <div class="price">¥12</div>
+          </article>
+          <article class="card">
+            <div class="card-emoji">🍓</div>
+            <h3>草莓酪酪</h3>
+            <div class="price">¥18</div>
+          </article>
+          <article class="card">
+            <div class="card-emoji">🍵</div>
+            <h3>芝士奶盖绿</h3>
+            <div class="price">¥14</div>
+          </article>
+          <article class="card">
+            <div class="card-emoji">🥭</div>
+            <h3>杨枝甘露</h3>
+            <div class="price">¥16</div>
+          </article>
+          <article class="card">
+            <div class="card-emoji">🫧</div>
+            <h3>百香果双响炮</h3>
+            <div class="price">¥13</div>
+          </article>
+        </div>
+      </section>
+
+      <section id="space" class="container space">
+        <h2>店面环境</h2>
+        <div class="space-grid">
+          <figure class="space-item">🏠<figcaption>店门口</figcaption></figure>
+          <figure class="space-item">🛋️<figcaption>内部环境</figcaption></figure>
+          <figure class="space-item">🍵<figcaption>操作台</figcaption></figure>
+          <figure class="space-item">🌿<figcaption>户外区</figcaption></figure>
+        </div>
+      </section>
+
+      <section id="contact" class="container contact">
+        <h2>联系我们</h2>
+        <p>地址：XX市XX路XX号</p>
+        <p>营业时间：10:00 - 22:00</p>
+        <div class="wechat">
+          <button class="btn btn-primary" id="wechat-btn">添加微信下单</button>
+          <div class="wechat-id">TeaYu_2024</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>© 茶屿初晴 • 欢迎光临</div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
